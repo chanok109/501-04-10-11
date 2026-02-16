@@ -1,7 +1,7 @@
 // The link to your model provided by Teachable Machine export panel
 // IMPORTANT: Ensure your model files are in a folder named 'my_model'
 // Point to the subfolder inside my_model
-const URL = "../tm-my-image-model/";
+const URL = "./tm-my-image-model/";
 let model, webcam, labelContainer, maxPredictions;
 
 // Load the image model and setup the webcam
@@ -88,4 +88,5 @@ async function predict() {
         probEl.innerText = probability + "%";
         fillEl.style.width = probability + "%";
     }
+
 }
