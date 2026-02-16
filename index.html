@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language Translator AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>🤟 Sign Language AI</h1>
+            <p>Real-time Translation Engine</p>
+        </header>
+
+        <main class="main-interface">
+            
+            <div class="camera-section">
+                <div class="video-wrapper">
+                    <div id="webcam-container">
+                        <div class="placeholder-text">Camera loading...</div>
+                    </div>
+                </div>
+                <button type="button" onclick="init()" class="start-btn">Start Camera</button>
+            </div>
+
+            <div class="results-section">
+                
+                <div class="top-prediction-card">
+                    <h3>Top Prediction</h3>
+                    <div id="big-result">-</div>
+                </div>
+
+                <div class="stats-card">
+                    <h3>Confidence Levels (Top 5)</h3>
+                    <div id="label-container">
+                        </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
